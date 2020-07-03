@@ -1,6 +1,6 @@
 import { LightningElement } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
-//import getBoats from '@salesforce/apex/BoatDataService.getBoats';
+import getBoats from '@salesforce/apex/BoatDataService.getBoats';
 
  // imports
  export default class BoatSearch extends NavigationMixin(LightningElement) {

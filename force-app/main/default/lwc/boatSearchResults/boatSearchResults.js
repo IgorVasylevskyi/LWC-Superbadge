@@ -36,14 +36,14 @@ export default class BoatSearchResults extends LightningElement {
           const fields = Object.assign({}, draft);
           return { fields };
       });
-      const promises = recordInputs.map(recordInput =>
+      /*const promises = recordInputs.map(recordInput =>
               //update boat record
             
         );
       Promise.all(promises)
           .then(() => {})
           .catch(error => {})
-          .finally(() => {});
+          .finally(() => {});*/
     }
     // Check the current value of isLoading before dispatching the doneloading or loading custom event
     notifyLoading(isLoading) { }
