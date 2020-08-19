@@ -13,16 +13,11 @@
       </lightning-layout-item>
       <!-- Bottom -->
       <lightning-layout-item size="12" class="slds-p-top_small slds-is-relative">
-        <!-- Spinner goes here -->
-        <!--lightning-spinner alternative-text="Loading" variant="brand" size="medium"></lightning-spinner-->
-        <!-- boatSearchResults goes here -->
-        <c-boat-search-results boattypeid={boatTypeId}></c-boat-search-results>
-        <!--template for:each={boats} for:item="boat">
-          <li key={boat.Id}>
-            <c-boat-tile boat={boat}></c-boat-tile>
-          </li>
-        </template-->
-        <!-- onloading={handleLoading} ondoneloading={handleDoneLoading} -->
+        <template if:true={isLoading} class="slds-is-relative">
+          <lightning-spinner alternative-text="Loading" variant="brand">
+          </lightning-spinner>
+        </template>
+        <c-boat-search-results boattypeid={boatTypeId} onloading={handleLoading} ondoneloading={handleDoneLoading}></c-boat-search-results>
       </lightning-layout-item>
     </lightning-layout>
   </template>
